@@ -1,0 +1,36 @@
+1.Libraries used in this project are
+  1.1 tidyverse  1.2 tidyr   1.3 dplyr  1.4 stringr
+ 
+2. Datasets obtained from assigment provided link are
+  X_test 
+  Y_test 
+  X_train 
+  Y_train 
+  activity_labels 
+  features
+  subject_train
+  subject_test
+  "_test" mean loaded from from test folder.
+  "_train" mean loaded from from train folder.
+  
+3. Y_trainlabel and Y_testlabel datasets are the products of merging descriptive activity name with no. of each activity.
+    Descriptive activity name obtained from activity_labels dataset.
+    1 = WALKING
+    2 = WALKING_UPSTAIRS
+    3 = WALKING_DOWNSTAIRS
+    4 = SITTING
+    5 = STANDING
+    6 = LAYING
+
+4.featuresmean and featuresSD are the vectors contain int. that represent each element in features dataset, which measurements on mean and S.D.
+
+5.columns_of_interest is a vector which combine featuresmean with featuresSD . Represent all columns taht  measurements on mean and S.D.
+
+6.X_train_interest and X_test_interest are datasets that subsetted X_train and X_test datasets to get only columns of interest (columns related to mean and S.D)
+
+7.Train and Test datasets are obtained by merging 
+  subject_train with Y_trainlabel and X_train_interest = Train
+  subject_test  with Y_testlabel and X_test_interest = Test
+ 
+8.Data dataset is obtained by merging Train with Test datasets from above.
+9.Tidy_Data is an independent dataset which compute average of each variable for each activity and each subject.
